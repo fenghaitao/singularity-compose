@@ -1,3 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "singularity-compose"
+dynamic = ["version"]
+description = "simple orchestration for singularity containers"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "Vanessa Sochat", email = "vsoch@users.noreply.github.com"}]
+keywords = ["singularity", "compose"]
+requires-python = ">=3.6"
+dependencies = [
+    "spython>=0.2.11",
+    "pyaml>=5.1.1",
+    "jsonschema",
+]
+
+[project.scripts]
+singularity-compose = "scompose.client:start"
+
 [tool.black]
 profile = "black"
 exclude = ["^env/"]

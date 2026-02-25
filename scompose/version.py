@@ -24,6 +24,7 @@ LICENSE = "LICENSE"
 INSTALL_REQUIRES = (
     ("spython", {"min_version": "0.2.11"}),
     ("pyaml", {"min_version": "5.1.1"}),
+    ("jsonschema", {"min_version": None}),
 )
 
 INSTALL_REQUIRES_CHECKS = INSTALL_REQUIRES + (("jsonschema", {"min_version": None}),)

@@ -1,0 +1,9 @@
+Bootstrap: docker
+From: alpine:latest
+
+%post
+    apk add --no-cache curl
+
+%startscript
+    echo "Container started!"
+    sleep infinity
